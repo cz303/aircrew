@@ -98,25 +98,25 @@ var refByNameAsync = function(ctx) { //finds and returns the name of the referre
 
     });
 }
-var checkDataAsync = function(ctx) { //checks the inputed user data
-    return new Promise(function(resolve, reject) {
-        try {
-            if (ethereum_address.isAddress(ctx.session.eth.toString())) {
-                resolve(true)
-                return true;
-            } else {
-                resolve(false)
-                return false;
+//var checkDataAsync = function(ctx) { //checks the inputed user data
+   // return new Promise(function(resolve, reject) {
+     //   try {
+       //     if (ethereum_address.isAddress(ctx.session.eth.toString())) {
+         //       resolve(true)
+           //     return true;
+            //} else {
+              //  resolve(false)
+                //return false;
 
 
-            }
+         //   }
 
-        } catch (e) {
-            reject("error");
-            console.log(e);
-        }
-    });
-}
+       // } catch (e) {
+           // reject("error");
+            //console.log(e);
+     //   /}
+   // });
+//}
 var findExistingAsync = function(ctx) { //finds existing members in the database
     return new Promise(function(resolve, reject) {
         try {
@@ -267,12 +267,12 @@ function firstMessage(ctx) {
 
     var finalResult;
 
-    finalResult = "⚔️⚔️Welcome to STAKD Bounty bot!⚔️⚔️"
+    finalResult = "⚔️⚔️Welcome to AIRDROP bot!⚔️⚔️"
     finalResult += "\n"
     finalResult += "\n"
-    finalResult += "1.📌Follow us on Twitter: https://twitter.com/StakdToken"
+    finalResult += "1.📌Follow us on Twitter: https://twitter.com/bitpif"
     finalResult += "\n"
-    finalResult += "2.📌Join our announcement channel: https://t.me/StakdAnnouncement"
+    finalResult += "2.📌Join our announcement channel: https://t.me/bitpif"
     finalResult += "\n";
     finalResult += "3.📌Every week, we will post weekly tasks and bounties in our announcement channel and our medium page! ";
     finalResult += "\n";
@@ -304,7 +304,7 @@ function makeMessage(ctx) {
     finalResult += "📢Bitcointalk user ID: ";
     finalResult += ctx.session.bitcointalk;
     finalResult += "\n";
-    finalResult += "💰Referral link: https://t.me/StakdBounty_bot?start=";
+    finalResult += "💰Referral link: https://t.me/EveryDayTripBot?start=";
     finalResult += ctx.session.refNumber;
     finalResult += "\n";
     finalResult += "💵Number of referrals: ";
@@ -485,7 +485,7 @@ bot.action('confirm', (ctx) => { //button click confirm
                     msg += "\n";
                     msg += "Please use this referral link";
                     msg += "\n";
-                    msg += "https://t.me/StakdBounty_bot?start=";
+                    msg += "https://t.me/EveryDayTripBot?start=";
                     msg += ctx.session.refNumber;
                     ctx.reply(msg);
                 });
