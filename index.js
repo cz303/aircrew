@@ -7,7 +7,7 @@ const rateLimit = require('telegraf-ratelimit')
 var mongoose = require('mongoose');
 const User = require('./user');
 var ethereum_address = require('ethereum-address'); //used for verifying eth address
-var port = process.env.PORT || 3000; app.listen(port); 
+var port = process.env.PORT || 5000; app.listen(port); 
 
 mongoose.connect(config.database, {
     socketTimeoutMS: 45000,
