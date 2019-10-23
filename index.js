@@ -7,6 +7,10 @@ const rateLimit = require('telegraf-ratelimit')
 var mongoose = require('mongoose');
 const User = require('./user');
 var ethereum_address = require('ethereum-address'); //used for verifying eth address
+var CronJob = require('cron').CronJob;
+new CronJob('* */4 * * * *', function() {
+  console.log('You will see this message every 4 minute');
+}, null, true, 'America/Los_Angeles');
 
 mongoose.connect(config.database, {
     socketTimeoutMS: 45000,
