@@ -4,6 +4,7 @@ const session = require('telegraf/session')
 const Extra = require('telegraf/extra')
 const Markup = require('telegraf/markup')
 const rateLimit = require('telegraf-ratelimit')
+var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 const User = require('./user');
 var ethereum_address = require('ethereum-address'); //used for verifying eth address
