@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
-  }
-  "engines": {
+  {
         "node": "8.9.3"
+}
 },
   "author": "Newman",
   "license": "MIT",
