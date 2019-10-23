@@ -339,11 +339,7 @@ async function stepCheck(ctx) { //step check
     } else if (ctx.session.step == 2) {
         ctx.session.twitter = ctx.message.text;
     } else if (ctx.session.step == 1) {
-        if (ethereum_address.isAddress(ctx.message.text.toString())) {
-            ctx.session.eth = ctx.message.text;
-        } else {
-            ctx.reply("Please input a valid ethereum address!");
-        }
+        ctx.session.eth = ctx.message.text;
     } else {
         console.log("other data");
     }
@@ -439,7 +435,7 @@ bot.action('delete', ({
 
 
 bot.action('eth', (ctx) => { //button click ETH
-    ctx.reply("Input your ERC-20 compatible Ethereum address (The same address that you put into the airdrop form).");
+    ctx.reply("Input your TRON compatible Ethereum address (The same address that you put into the airdrop form).");
     ctx.session.step = 1;
 });
 
